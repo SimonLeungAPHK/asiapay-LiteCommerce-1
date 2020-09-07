@@ -1,0 +1,38 @@
+# vim: set ts=2 sw=2 sts=2 et:
+#
+# Fixtures
+#
+# @author    AsiaPay Limited
+# @copyright Copyright (c) 2012 AsiaPay Limited. All rights reserved
+# @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+# @link      http://www.litecommerce.com/
+# @since     1.0.0
+
+XLite\Model\Payment\Method:
+  - service_name: AsiaPay ClientPost
+    class: Module\AsiaPay\ClientPost\Model\Payment\Processor\ClientPost
+    added: 1
+    translations:
+      - code: en
+        name: AsiaPay ClientPost
+    settings:
+      - name: payment_url
+        value: https://test.pesopay.com/b2cDemo/eng/payment/payForm.jsp
+      - name: merchant_id
+        value: 1018
+      - name: curr_code
+        value: 608
+      - name: pay_type
+        value: N
+      - name: pay_method
+        value: ALL
+      - name: language
+        value: E
+      - name: prefix
+        value: xlite_
+      - name: secure_hash_secret
+        value: ''
+      - name: transaction_type
+        value: 01
+      - name: challenge_preference
+        value: 04
